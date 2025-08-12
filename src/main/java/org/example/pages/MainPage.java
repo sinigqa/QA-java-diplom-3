@@ -1,6 +1,7 @@
 package org.example.pages;
 
 import io.qameta.allure.Step;
+import org.example.config.Endpoints;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +28,7 @@ public class MainPage {
 
     @Step("Открываем главную страницу")
     public void open() {
-        driver.get("https://stellarburgers.nomoreparties.site/");
+        driver.get(Endpoints.BASE_URL);
     }
 
     @Step("Кликаем на вкладку 'Булки'")

@@ -26,13 +26,6 @@ public class LoginPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-
-
-
-    public void open() {
-        driver.get("https://stellarburgers.nomoreparties.site/login");
-    }
-
     @Step("Вводим 'Email'")
     public void enterEmail(String email) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
