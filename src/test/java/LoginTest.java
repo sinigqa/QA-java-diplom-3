@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.example.api.UserApi;
@@ -43,6 +44,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Авторизация через кнопку 'Войти в аккаунт'")
     public void loginViaMainPageButtonShouldSeeLogoutButton() {
         mainPage.open();
         mainPage.clickLoginButton();
@@ -54,6 +56,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Авторизация через кнопку 'Войти' на странице регистрации")
     public void clickSignInButtonOnRegistrationPage() {
         mainPage.open();
         mainPage.clickLoginButton();
@@ -68,6 +71,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Авторизация через кнопку 'Личный кабинет'")
     public void loginViaPersonalAccountButtonShouldSeeLogoutButton() {
         mainPage.open();
         mainPage.clickPersonalAccount();
@@ -79,6 +83,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Авторизация через кнопку 'Войти' на странице восстановления пароля")
     public void clickSignInButtonOnPasswordRecoveryPage() {
         mainPage.open();
         mainPage.clickLoginButton();
@@ -87,6 +92,7 @@ public class LoginTest extends BaseTest {
         loginPage.login(email, password);
 
         mainPage.clickPersonalAccount();
+
 
         assertTrue(accountPage.isLogoutButtonDisplayed());
 

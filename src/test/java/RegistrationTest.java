@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.example.api.UserApi;
 import org.example.api.UserRequest;
@@ -41,7 +42,8 @@ public class RegistrationTest extends BaseTest {
 
 
     @Test
-    public void registerViaRegisterPageShouldSeeLogoutButton()  {
+    @DisplayName("Успешная регистрация")
+    public void registerViaRegisterPageShouldSeeLogoutButton() throws InterruptedException {
         String name = RandomStringUtils.randomAlphabetic(7);
 
         mainPage.open();
@@ -52,6 +54,7 @@ public class RegistrationTest extends BaseTest {
         loginPage.waitForPageToLoad();
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
+        Thread.sleep(20000);
         loginPage.clickLoginButton();
         mainPage.clickPersonalAccount();
 
@@ -59,6 +62,7 @@ public class RegistrationTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Проверка ошибки при вводе некорректного пароля")
     public void registerWithShortPasswordShouldShowPasswordError() {
 
         String testEmail = RandomStringUtils.randomAlphabetic(8) + "@test.com";
