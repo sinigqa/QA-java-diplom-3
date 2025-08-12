@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,24 +24,25 @@ public class RegisterPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    @Step("Вводим 'Имя'")
     public void enterName(String name) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(nameField))
                 .sendKeys(name);
     }
 
-
+    @Step("Вводим 'Email'")
     public void enterEmail(String email) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailField))
                 .sendKeys(email);
     }
 
-
+    @Step("Вводим 'Пароль'")
     public void enterPassword(String password) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField))
                 .sendKeys(password);
     }
 
-
+    @Step("Нажимаем на кнопку 'Зарегистрироваться'")
     public void clickRegisterButton() {
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)).click();
     }
@@ -53,11 +55,12 @@ public class RegisterPage {
         clickRegisterButton();
     }
 
-
+    @Step("Нажимаем кнопку 'Войти'")
     public void clickLoginLink() {
         wait.until(ExpectedConditions.elementToBeClickable(loginLink)).click();
     }
 
+    @Step("Проверяем отображение ошибки")
     public boolean isPasswordErrorDisplayed() {
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(passwordError)).isDisplayed();

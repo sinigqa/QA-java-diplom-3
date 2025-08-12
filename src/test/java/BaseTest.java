@@ -9,7 +9,6 @@ public abstract class BaseTest {
 
     @Before
     public void setUp() {
-        // Теперь метод createWebDriver() без параметров
         driver = BaseClass.createWebDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
