@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import java.time.Duration;
 
 @RunWith(Parameterized.class)
-public class BaseTest {
+public abstract class BaseTest {
     protected WebDriver driver;
 
 
@@ -23,13 +23,10 @@ public class BaseTest {
 
     @Before
     public void setUp() {
-        try {
+
             driver = BaseClass.createWebDriver(browser);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        } catch (Exception e) {
-            throw new RuntimeException("Не удалось запустить браузер: " + browser, e);
-        }
     }
 
     @After

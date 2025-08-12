@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.example.pages.MainPage;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +15,7 @@ public class ConstructorTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Проверка переключения на вкладку 'Булки'")
     public void testBunsSection() {
         mainPage.clickSaucesTab();
         mainPage.clickBunsTab();
@@ -21,12 +23,14 @@ public class ConstructorTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Проверка переключения на вкладку 'Соусы'")
     public void testSaucesSection() {
         mainPage.clickSaucesTab();
         assertTrue(mainPage.isSaucesSectionDisplayed());
     }
 
     @Test
+    @DisplayName("Проверка переключения на вкладку 'Начинки'")
     public void testFillingsSection() {
         mainPage.clickFillingsTab();
         assertTrue(mainPage.isFillingsSectionDisplayed());

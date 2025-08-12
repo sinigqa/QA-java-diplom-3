@@ -17,7 +17,7 @@ public class BaseClass {
                 return new ChromeDriver();
 
             case "yandex":
-                File driverExecutable = new File("C:/Users/user/chromedriver-win64/chromedriver.exe"); // Указываем путь к chromedriver.exe
+                File driverExecutable = new File("C:/Users/user/chromedriver-win64/chromedriver.exe");
 
                 ChromeDriverService service = new ChromeDriverService.Builder()
                         .usingDriverExecutable(driverExecutable)
