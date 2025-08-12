@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -45,6 +46,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Авторизация через кнопку 'Войти в аккаунт'")
+    @Description("Проверка авторизации через кнопку 'Войти в аккаунт' на главной странице")
     public void loginViaMainPageButtonShouldSeeLogoutButton() {
         mainPage.open();
         mainPage.clickLoginButton();
@@ -57,6 +59,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Авторизация через кнопку 'Войти' на странице регистрации")
+    @Description("Проверка авторизации через кнопку 'Войти' на странице регистрации")
     public void clickSignInButtonOnRegistrationPage() {
         mainPage.open();
         mainPage.clickLoginButton();
@@ -72,6 +75,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Авторизация через кнопку 'Личный кабинет'")
+    @Description("Проверка авторизации через кнопку 'Личный кабинет' в шапке веб приложения")
     public void loginViaPersonalAccountButtonShouldSeeLogoutButton() {
         mainPage.open();
         mainPage.clickPersonalAccount();
@@ -84,6 +88,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Авторизация через кнопку 'Войти' на странице восстановления пароля")
+    @Description("Проверка авторизации через кнопку 'Войти' на странице восстановления пароля")
     public void clickSignInButtonOnPasswordRecoveryPage() {
         mainPage.open();
         mainPage.clickLoginButton();

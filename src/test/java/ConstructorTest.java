@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.example.pages.MainPage;
 import org.junit.Before;
@@ -16,6 +17,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка переключения на вкладку 'Булки'")
+    @Description("Переключаемся на вкладку 'Соусы' и обратно на вкладку 'Булки', проверяем что вкладка 'Булки' активна")
     public void testBunsSection() {
         mainPage.clickSaucesTab();
         mainPage.clickBunsTab();
@@ -24,6 +26,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка переключения на вкладку 'Соусы'")
+    @Description("Переключаемся на вкладку 'Соусы', проверяем что вкладка 'Соусы' активна")
     public void testSaucesSection() {
         mainPage.clickSaucesTab();
         assertTrue(mainPage.isSaucesTabActive());
@@ -31,6 +34,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка переключения на вкладку 'Начинки'")
+    @Description("Переключаемся на вкладку 'Начинки', проверяем что вкладка 'Начинки' активна")
     public void testFillingsSection() {
         mainPage.clickFillingsTab();
         assertTrue(mainPage.isFillingsTabActive());

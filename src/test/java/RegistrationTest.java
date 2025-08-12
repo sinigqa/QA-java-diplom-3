@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.example.api.UserApi;
@@ -43,6 +44,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test
     @DisplayName("Успешная регистрация")
+    @Description("Проверка успешной регистрации")
     public void registerViaRegisterPageShouldSeeLogoutButton() {
         String name = RandomStringUtils.randomAlphabetic(7);
 
@@ -61,7 +63,8 @@ public class RegistrationTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка ошибки при вводе некорректного пароля")
+    @DisplayName("Ошибка при вводе некорректного пароля")
+    @Description("Проверка наличия ошибки при вводе некорректного пароля")
     public void registerWithShortPasswordShouldShowPasswordError() {
 
         String testEmail = RandomStringUtils.randomAlphabetic(8) + "@test.com";
