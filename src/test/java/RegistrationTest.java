@@ -45,7 +45,7 @@ public class RegistrationTest extends BaseTest {
     @Test
     @DisplayName("Успешная регистрация")
     @Description("Проверка успешной регистрации")
-    public void registerViaRegisterPageShouldSeeLogoutButton() {
+    public void testRegisterViaRegisterPageShouldSeeLogoutButton() {
         String name = RandomStringUtils.randomAlphabetic(7);
 
         mainPage.open();
@@ -65,7 +65,7 @@ public class RegistrationTest extends BaseTest {
     @Test
     @DisplayName("Ошибка при вводе некорректного пароля")
     @Description("Проверка наличия ошибки при вводе некорректного пароля")
-    public void registerWithShortPasswordShouldShowPasswordError() {
+    public void testRegisterWithShortPasswordShouldShowPasswordError() {
 
         String testEmail = RandomStringUtils.randomAlphabetic(8) + "@test.com";
         String testPassword = RandomStringUtils.randomAlphanumeric(5);

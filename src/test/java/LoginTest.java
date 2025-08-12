@@ -47,7 +47,7 @@ public class LoginTest extends BaseTest {
     @Test
     @DisplayName("Авторизация через кнопку 'Войти в аккаунт'")
     @Description("Проверка авторизации через кнопку 'Войти в аккаунт' на главной странице")
-    public void loginViaMainPageButtonShouldSeeLogoutButton() {
+    public void testLoginViaMainPageButtonShouldSeeLogoutButton() {
         mainPage.open();
         mainPage.clickLoginButton();
         loginPage.login(email, password);
@@ -60,7 +60,7 @@ public class LoginTest extends BaseTest {
     @Test
     @DisplayName("Авторизация через кнопку 'Войти' на странице регистрации")
     @Description("Проверка авторизации через кнопку 'Войти' на странице регистрации")
-    public void clickSignInButtonOnRegistrationPage() {
+    public void testClickSignInButtonOnRegistrationPage() {
         mainPage.open();
         mainPage.clickLoginButton();
         loginPage.clickRegisterLink();
@@ -76,7 +76,7 @@ public class LoginTest extends BaseTest {
     @Test
     @DisplayName("Авторизация через кнопку 'Личный кабинет'")
     @Description("Проверка авторизации через кнопку 'Личный кабинет' в шапке веб приложения")
-    public void loginViaPersonalAccountButtonShouldSeeLogoutButton() {
+    public void testLoginViaPersonalAccountButtonShouldSeeLogoutButton() {
         mainPage.open();
         mainPage.clickPersonalAccount();
         loginPage.login(email, password);
@@ -89,7 +89,7 @@ public class LoginTest extends BaseTest {
     @Test
     @DisplayName("Авторизация через кнопку 'Войти' на странице восстановления пароля")
     @Description("Проверка авторизации через кнопку 'Войти' на странице восстановления пароля")
-    public void clickSignInButtonOnPasswordRecoveryPage() {
+    public void testClickSignInButtonOnPasswordRecoveryPage() {
         mainPage.open();
         mainPage.clickLoginButton();
         loginPage.clickForgotPasswordLink();
