@@ -43,7 +43,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test
     @DisplayName("Успешная регистрация")
-    public void registerViaRegisterPageShouldSeeLogoutButton() throws InterruptedException {
+    public void registerViaRegisterPageShouldSeeLogoutButton() {
         String name = RandomStringUtils.randomAlphabetic(7);
 
         mainPage.open();
@@ -54,7 +54,6 @@ public class RegistrationTest extends BaseTest {
         loginPage.waitForPageToLoad();
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
-        Thread.sleep(20000);
         loginPage.clickLoginButton();
         mainPage.clickPersonalAccount();
 
