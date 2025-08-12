@@ -27,14 +27,13 @@
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- Selenium WebDriver -->
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.10.0</version>
         </dependency>
 
-        <!-- JUnit 4 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -42,28 +41,24 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- WebDriver Manager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.0</version>
         </dependency>
 
-        <!-- Логирование -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.7</version>
         </dependency>
 
-        <!-- REST Assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.3.0</version>
         </dependency>
 
-        <!-- Apache Commons Lang -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -116,7 +111,6 @@
                     </systemProperties>
                 </configuration>
                 <dependencies>
-                    <!-- ADDED: AspectJ for Allure -->
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
