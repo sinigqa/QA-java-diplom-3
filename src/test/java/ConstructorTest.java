@@ -19,20 +19,20 @@ public class ConstructorTest extends BaseTest {
     public void testBunsSection() {
         mainPage.clickSaucesTab();
         mainPage.clickBunsTab();
-        assertTrue(mainPage.isBunsSectionDisplayed());
+        assertTrue(mainPage.isBunsTabActive());
     }
 
     @Test
     @DisplayName("Проверка переключения на вкладку 'Соусы'")
     public void testSaucesSection() {
         mainPage.clickSaucesTab();
-        assertTrue(mainPage.isSaucesSectionDisplayed());
+        assertTrue(mainPage.isSaucesTabActive());
     }
 
     @Test
     @DisplayName("Проверка переключения на вкладку 'Начинки'")
     public void testFillingsSection() {
         mainPage.clickFillingsTab();
-        assertTrue(mainPage.isFillingsSectionDisplayed());
+        assertTrue(mainPage.isFillingsTabActive());
     }
 }
