@@ -9,7 +9,7 @@ import java.io.File;
 
 public class BaseClass {
     public static WebDriver createWebDriver() {
-        String browser = System.getProperty("browser", "chrome"); // "chrome" по умолчанию
+        String browser = System.getProperty("browser", "chrome");
         return createDriver(browser);
     }
 
