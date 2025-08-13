@@ -15,11 +15,17 @@
         <selenium.version>4.10.0</selenium.version>
         <webdrivermanager.version>5.9.0</webdrivermanager.version>
         <rest-assured.version>5.3.0</rest-assured.version>
-        <allure.version>2.24.0</allure.version>
+        <allure.version>2.21.0</allure.version>
         <aspectj.version>1.9.19</aspectj.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -102,9 +108,9 @@
                     </properties>
                     <systemProperties>
                         <property>
-                            <name>allure.results.directory</name>
-                            <value>${project.build.directory}/allure-results</value>
-                        </property>
+                        <name>allure.results.directory</name>
+                        <value>${project.build.directory}/allure-results/</value>
+                    </property>
                         <property>
                             <name>webdriver.chrome.silentOutput</name>
                             <value>true</value>
@@ -122,6 +128,14 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <reportVersion>2.21.0</reportVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>
